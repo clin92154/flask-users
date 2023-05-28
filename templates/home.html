@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<div class="container text-center my-5">
+  <div class="row justify-content-md-center align-items-center">
+    <div class="col"></div>
+    <div class="col">
+      <div class="card text-center mb-3 shadow-lg">
+        <div class="card-body">
+          <h1 class="card-title">歡迎, {{ session['nm'] }}</h1>
+          <p class="card-text">
+            <a href="/edit-profile" class="btn btn-outline-secondary"
+              >修改會員資料</a
+            ><br />
+            <a href="/logout" class="btn btn-outline-primary">登出</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock content %}

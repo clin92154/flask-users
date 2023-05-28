@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block content %}
+<div class="container text-center my-5">
+  <div class="row justify-content-md-center align-items-center">
+    <div class="col"></div>
+    <div class="col">
+      <div class="card text-center mb-3 shadow-lg">
+        <div class="card-body">
+          <form  method="POST" action="/edit-profile">
+            <div class="form-floating">
+            <input
+                type="text" 
+                class="form-control"
+                id="nm" 
+                placeholder="Password"
+                name="nm" 
+                value="{{ user.1 }}" 
+                required
+              />
+              <label for="nm">名字:</label>
+            </div></br>
+            <div class="form-floating">
+              <input
+                type="text"
+                id="birth"
+                name="birth"
+                value="{{ user.2 }}"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+              <label for="birth">生日</label>
+            </div></br>            
+            <div class="form-floating">
+              <input
+                type="text"
+                id="blood"
+                name="blood"
+                class="form-control"
+                placeholder="血型"
+                value="{{ user.3 }}"
+                required
+              />
+              <label for="blood">血型</label>
+            </div>
+          </br>            
+            <div class="form-floating">
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                value="{{ user.4 }}"
+                class="form-control"
+                placeholder="手機號碼"
+                required
+              />
+              <label for="phone">手機號碼</label>
+            </div></br>            
+            <div class="form-floating">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value="{{ user.5 }}"
+                required
+                class="form-control"
+                placeholder="Password"
+              />
+              <label for="email">電子信箱</label>
+            </div></br>
+            <input class="btn btn-outline-danger" type="submit" value="儲存" />
+            <a href="{{url_for('home')}}" class="btn">返回</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock content %}
